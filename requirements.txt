@@ -1,0 +1,10 @@
+# API framework and settings
+fastapi==0.165.0
+pydantic-settings==2.16.3
+
+# Server
+uvicorn[standard]==0.54.0
+
+# Auth: password hashing and tokens
+pwdlib[argon2]==0.4.2
+PyJWT==2.15.1
