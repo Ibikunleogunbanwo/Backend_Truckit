@@ -1,24 +1,10 @@
-# develop api calls
-fastapi
+# API framework and settings
+fastapi==0.165.0
+pydantic-settings==2.16.3
 
-# run api calls
-# light weight server
-# http protocol
-uvicorn
+# Server
+uvicorn[standard]==0.54.0
 
-# used to connect to mongo altas
-pymongo
-
-# hash the passwords
-pwdlib[argon2]
-
-# generate the tokens
-# authentication purpose
-PyJWT
-
-
-# used to load the env file
-# store secuirirty credentials
-python-dotenv
-
-#  python3 -m pip install -r requirements.txt
+# Auth: password hashing and tokens
+pwdlib[argon2]==0.4.2
+PyJWT==2.15.1

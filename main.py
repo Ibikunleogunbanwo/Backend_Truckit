@@ -1,7 +1,13 @@
-from fastapi import FastAPI,HTTPException,Depends
+from fastapi import APIRouter, FastAPI
 
-app = FastAPI()
+app = FastAPI(title="Truckit API", version="0.1.0")
 
-@app.get("/")
-def home():
-    return {"message": "Welcome to the Truckit API!"}
+api_router = APIRouter(prefix="/api/v1")
+
+
+@api_router.get("/health")
+def health():
+    return {"status": "ok"}
+
+
+app.include_router(api_router)
